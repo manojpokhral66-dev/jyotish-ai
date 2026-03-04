@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jyotish AI – Daily Vedic Astrology Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Jyotish AI</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search astrology...">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#rashis">Rashis</a></li>
+            <li><a href="#dashboard">Daily Dashboard</a></li>
+            <li><a href="#updates">Updates</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#learn">Learn</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>Jyotish AI</h1>
+            <h2>Daily Vedic Astrology Guide</h2>
+            <p>"Ancient Indian astrology based on Graha, Rashi, Nakshatra and planetary transits."</p>
+            <p class="welcome-text">Welcome to your personalized guide to the cosmos. Discover your daily path through the wisdom of Indian Jyotish astrology.</p>
+        </div>
+    </header>
+
+    <div class="trending-panel">
+        <strong>Trending:</strong> <span id="trending-text">Saturn enters Aquarius - Read the impact!</span>
+    </div>
+
+    <main>
+        <section id="rashis" class="section">
+            <h2 class="section-title">The 12 Rashis (Zodiac Signs)</h2>
+            <div id="rashi-grid" class="grid-container">
+                </div>
+        </section>
+
+        <section id="dashboard" class="section dashboard-section">
+            <h2 class="section-title">Daily Horoscope Dashboard</h2>
+            <p class="date-display">Current Date: <span id="current-date"></span></p>
+            <div id="dashboard-list" class="dashboard-list">
+                </div>
+        </section>
+
+        <section id="updates" class="section">
+            <h2 class="section-title">Astrology Forecast Updates</h2>
+            <div id="updates-feed" class="updates-feed">
+                </div>
+        </section>
+
+        <section id="blog" class="section">
+            <h2 class="section-title">Vedic Astrology Blog</h2>
+            <div id="blog-grid" class="grid-container">
+                </div>
+        </section>
+
+        <section id="learn" class="section">
+            <h2 class="section-title">Learn Basic Astrology</h2>
+            <div id="learn-grid" class="grid-container">
+                </div>
+        </section>
+    </main>
+
+    <div id="rashi-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p><strong>Planet Influence:</strong> <span id="modal-planet"></span></p>
+            <p><strong>Lucky Color:</strong> <span id="modal-color"></span></p>
+            <p><strong>Lucky Number:</strong> <span id="modal-number"></span></p>
+            <div class="modal-body">
+                <h3>Today's Prediction</h3>
+                <p id="modal-prediction"></p>
+                <h3>Guidance</h3>
+                <p id="modal-advice"></p>
+            </div>
+        </div>
+    </div>
+
+    <button id="fab" onclick="toggleChat()">Ask Astrology Question</button>
+
+    <div id="chatbox" class="chatbox hidden">
+        <div class="chat-header">
+            <h3>Vedic Astro Assistant</h3>
+            <button onclick="toggleChat()">X</button>
+        </div>
+        <div id="chat-output" class="chat-output">
+            <div class="message bot">Namaste! I am your Jyotish assistant. How can I help you today? (e.g., "What is Saturn transit?", "Aries today")</div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type your question..." onkeypress="handleChatEnter(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Jyotish AI. May the planets guide you.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+  </html>
+  
