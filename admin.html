@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Jyotish AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: var(--bg-light); padding: 2rem;">
+
+    <h1 style="text-align: center; color: var(--dark-blue);">Admin Dashboard</h1>
+
+    <div class="card" style="max-width: 600px; margin: 2rem auto;">
+        <h2>Upload Photos to Gallery</h2>
+        <p style="font-size: 0.9rem; margin-bottom: 1rem;">Upload images to appear on your extra pages.</p>
+        <input type="file" id="photoInput" accept="image/*" style="margin-bottom: 1rem; width: 100%;">
+        <button onclick="savePhoto()" style="background: var(--saffron); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 5px; cursor: pointer;">Upload Photo</button>
+        <p id="upload-status" style="color: green; margin-top: 10px; display: none;">Photo saved successfully!</p>
+    </div>
+
+    <div class="card" style="max-width: 600px; margin: 2rem auto;">
+        <h2>User Questions (Chat Box)</h2>
+        <div id="admin-questions" style="margin-top: 1rem; text-align: left;">
+            </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="index.html" style="color: var(--dark-blue); font-weight: bold;">Return to Home</a> | 
+        <a href="gallery.html" style="color: var(--dark-blue); font-weight: bold;">View Gallery Page</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Load questions when admin page opens
+        window.onload = loadAdminQuestions;
+    </script>
+</body>
+</html>
